@@ -1,6 +1,7 @@
 var casper = require('casper').create({
     verbose: true,
-    logLevel: "debug"
+    logLevel: "debug",
+    clientScripts: ["inc/jquery.min.js"]
 });
 
 var links = {
