@@ -15,19 +15,12 @@ function getLinks() {
     //console.log(links);
 }
 
-casper.start('http://www.neimanmarcus.com.cn/casper/link.html', function() {
+casper.start('http://www.glamour-sales.com.cn/xmas2012/shake.html', function() {
     // search for 'casperjs' from google form
     //this.fill('form[action="/search"]', { q: 'casperjs' }, true);
     this.wait(2000, function() {
-        this.echo("I've waited for a second.");
+        this.debugHTML();
     });
-});
-
-casper.then(function() {
-    // aggregate results for the 'casperjs' search
-    links = this.evaluate(getLinks);
-    // now search for 'phantomjs' by filling the form again
-    //this.fill('form[action="/search"]', { q: 'phantomjs' }, true);
 });
 
 casper.then(function() {
@@ -37,7 +30,6 @@ casper.then(function() {
 
 casper.run(function() {
     // echo results in some pretty fashion
-this.echo(links);
-    //this.echo(' - ' + links.join('\n - '));
+    this.echo(' - ' + links.join('\n - '));
     this.echo(links.length + ' links found:').exit();
 });

@@ -5,7 +5,7 @@ var casper = require('casper').create({
 });
 
 var links = {
-    'http://www.neimanmarcus.com.cn/casper/link.html': 0
+    'http://www.glamour-sales.com.cn/xmas2012/shake.html': 0
 };
 
 casper.countLinks = function() {
