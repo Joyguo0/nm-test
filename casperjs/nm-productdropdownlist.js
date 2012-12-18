@@ -33,7 +33,7 @@ casper.then(function() {
     casper.page.injectJs('nodejs'); // so we can pick an option with the select item below
 });
 casper.run(function() { 
-	var mydata=JSON.stringify(links);
+	var mydata=links;
 	 
 	var currentTime = new Date();
 	var month = currentTime.getMonth() + 1;
