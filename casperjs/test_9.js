@@ -27,7 +27,8 @@ casper.start('http://www.neimanmarcus.com.cn', function() {
 	fileinfo = fs.open('links_list.json', 'r').read().trim();
 	var readJson = eval(fileinfo);
 	casper.log( "read link nubmer is :" + readJson.length + ", from file \"links_list.json\" ");
-
+	//casper.log(allPrpos(fileinfo));
+	casper.log(allPrpos(readJson));
 
     links = this.evaluate(function() {
         var elements = __utils__.findAll('a[href]');
