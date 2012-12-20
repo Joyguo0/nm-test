@@ -21,7 +21,7 @@ http://www.neimanmarcus.com.cn/
 ##About This Test Case
 
 ####1 Spide all link
--Spide link in one page.
+- Spide link in one page.
 
 ```javascript
 casper.start('http://www.neimanmarcus.com.cn', function() {
@@ -47,7 +47,7 @@ casper.run(function() {
 });
 ```
 
--Spide link in one website
+- Spide link in one website
 
 ```javascript
 casper.run(function() {
@@ -60,7 +60,28 @@ casper.run(function() {
 
 ####2 Simula browser sbumit AJAX query
 
+- put info into Dom value
+
+- document.querySelectorAll('#dom > option');
+
+
 ####3 Save & read log
+- call nodejs
+```javascript
+casper.page.injectJs('nodejs');
+var fs = require('fs');
+```
+
+- use nodejs fs.open
+```javascript
+fileinfo = fs.open(myfilename, 'r').read().trim();
+//change to json
+readJson = eval(fileinfo);
+```
+- use nodejs fs.write
+```javascript
+fs.write(myfilename, mydata);
+```
 
 ####4 Genetate repost
 
