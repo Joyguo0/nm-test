@@ -18,7 +18,44 @@ The Neiman Marcus Group also owns Bergdorf Goodman specialty retail department s
 http://www.neimanmarcus.com.cn/
 
 
-
-
-
 ##About This Test Case
+
+####1 Spide all link
+-
+
+```javascript
+casper.start('http://twitter.github.com/bootstrap/javascript.html#dropdowns', function() {
+    this.test.assertExists('#navbar-example');
+    this.click('#dropdowns .nav-pills .dropdown:last-of-type a.dropdown-toggle');
+    this.waitUntilVisible('#dropdowns .nav-pills .open', function() {
+        this.test.pass('Dropdown is open');
+    });
+});
+
+casper.run(function() {
+    this.test.done();
+});
+```
+
+
+####2 Simula browser sbumit AJAX query
+
+####3 Save & read log
+
+####4 Genetate repost
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
