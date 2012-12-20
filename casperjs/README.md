@@ -21,19 +21,39 @@ http://www.neimanmarcus.com.cn/
 ##About This Test Case
 
 ####1 Spide all link
--
+-Spide link in one page.
 
 ```javascript
-casper.start('http://twitter.github.com/bootstrap/javascript.html#dropdowns', function() {
-    this.test.assertExists('#navbar-example');
-    this.click('#dropdowns .nav-pills .dropdown:last-of-type a.dropdown-toggle');
-    this.waitUntilVisible('#dropdowns .nav-pills .open', function() {
-        this.test.pass('Dropdown is open');
+casper.start('http://www.neimanmarcus.com.cn', function() {
+    links = this.evaluate(function() {
+        var elements = __utils__.findAll('a[href]');
+		var aArr = [];
+		[].forEach.call(elements,function(el){
+			var _href = el.getAttribute('href');
+				if ( _href.search('http://') === -1 && _href.search('#') === -1){
+					aArr.push('http://www.neimanmarcus.com.cn' + _href);
+				}else{
+					aArr.push(_href);
+				}	
+			}
+		);
+		return aArr;
     });
 });
-
 casper.run(function() {
-    this.test.done();
+	var mydata=JSON.stringify(links);
+	casper.log(mydata);
+    this.exit();
+});
+```
+
+-Spide link in one website
+
+```javascript
+casper.run(function() {
+	var mydata=JSON.stringify(links);
+	casper.log(mydata);
+    this.exit();
 });
 ```
 
