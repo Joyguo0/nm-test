@@ -104,7 +104,26 @@ fs.write(myfile, mydata);
 	}
 ]
 ```
+- description
+<table class="table table-bordered table-striped table-condensed">
+   <tr>
+      <td>Parameter</td>
+      <td>Description</td>
+      <td>Detail</td>
+   </tr>
+   <tr>
+      <td>Mary</td>
+      <td>Jones</td>
+      <td>456 Pine St.</td>
 
+   </tr>
+   <tr>
+      <td>Jim</td>
+      <td>Baker</td>
+      <td>789 Park Ave.</td>
+
+   </tr>
+</table>
 
 ##Test Case
 
