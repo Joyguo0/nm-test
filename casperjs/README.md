@@ -112,16 +112,40 @@ fs.write(myfile, mydata);
       <td>Detail</td>
    </tr>
    <tr>
-      <td>Mary</td>
-      <td>Jones</td>
-      <td>456 Pine St.</td>
-
+      <td>num</td>
+      <td>count number</td>
+      <td>digatal</td>
    </tr>
    <tr>
-      <td>Jim</td>
-      <td>Baker</td>
-      <td>789 Park Ave.</td>
-
+      <td>openingurl</td>
+      <td>opening web page</td>
+      <td>URL adress, the old one</td>
+   </tr>
+   <tr>
+      <td>currenturl</td>
+      <td>new page</td>
+      <td>URL adress</td>
+   </tr>
+   <tr>
+      <td>title</td>
+      <td>New page title</td>
+      <td>need be encoded</td>
+   </tr>
+   <tr>
+      <td>type</td>
+      <td>page type</td>
+      <td>
+      - 1. Category page
+      - 2. Category with fliter
+      - 3. Product page
+      - 4. CMS page
+      - 5. Other 
+      </td>
+   </tr>
+   <tr>
+      <td>status</td>
+      <td>Success or not</td>
+      <td>"true" or "false"</td>
    </tr>
 </table>
 
