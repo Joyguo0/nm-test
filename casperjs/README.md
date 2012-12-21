@@ -147,9 +147,14 @@ fs.write(myfile, mydata);
       <td>Success or not</td>
       <td>"true" or "false"</td>
    </tr>
+   <tr>
+      <td>http</td>
+      <td>http status</td>
+      <td>404,200…	</td>
+   </tr>
 </table>
 
-##Test Case
+##Future: Auto Test Case
 
 ### 1. Login
 ### 2. Register
