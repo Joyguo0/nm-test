@@ -8,9 +8,9 @@ high-level functions, methods & syntaxic sugar for doing common
 
 
 
-##About This Test Case
+##Script for key function
 
-####1 Spide all link
+####1. Spide all link
 - Spide link in one page.
 
 ```javascript
@@ -48,7 +48,7 @@ casper.run(function() {
 ```
 
 
-####2 Simula browser sbumit AJAX query
+####2. Simula browser sbumit AJAX query
 
 - put info into Dom value
 
@@ -57,7 +57,7 @@ document.querySelectorAll('#dom > option');
 ```
 
 
-####3 Save & read log
+####3. Save & read log
 - call nodejs
 ```javascript
 casper.page.injectJs('nodejs');
@@ -75,19 +75,45 @@ readJson = eval(fileinfo);
 fs.write(myfilename, mydata);
 ```
 
-####4 Genetate repost
+####4. Genetate report
 
 - bulid JSON
 
 ```javascript
 var mydata=JSON.stringify(myinfomation);
+var fs = require('fs');
+fs.write(myfile, mydata);
 ```
 
-- 
 
 
+##Web Crawler Report
+
+- report template
+
+```javascript
+[
+	{
+	"num":"1",
+	"openingurl":"http://www.neimanmarcus.com.cn/women/categories/bags.html",
+	"changetourl":"http://www.neimanmarcus.com.cn/women/categories/bags/a01-0000024-99-068.html",
+	"title":" Alexander McQueen - 花朵印花De-Manta手拿包",
+	"type":"产品页面", 
+	"status":"true",
+	"http":"404"
+	}
+]
+```
 
 
+##Test Case
+
+### 1. Login
+### 2. Register
+### 3. Filter Product
+### 4. Search product
+### 5. Add to cart
+### 6. Check out
 
 
 ##About Neiman Marcus [![Neiman Marcus](http://upload.wikimedia.org/wikipedia/en/thumb/8/84/Neiman_Marcus_logo.svg/200px-Neiman_Marcus_logo.svg.png)](http://www.neimanmarcus.com/)
