@@ -107,9 +107,9 @@ fs.write(myfile, mydata);
 - description
 <table class="table table-bordered table-striped table-condensed">
    <tr>
-      <td>Parameter</td>
-      <td>Description</td>
-      <td>Detail</td>
+      <th>Parameter</th>
+      <th>Description</th>
+      <th>Detail</th>
    </tr>
    <tr>
       <td>num</td>
