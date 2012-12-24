@@ -14,12 +14,12 @@ casper.then(function() {
     // aggregate results for the 'casperjs' search
     //links = this.evaluate(getLinks);
     // now search for 'phantomjs' by fillin the form again
-    this.fill('form[id="search_mini_form"]', { q: "red" }, true);
+    this.fill('form[id="search_mini_form"]', { q: "裙" }, true);
 });
 
 casper.then(function() {
     links = this.evaluate(function() {
-        var elements = __utils__.findAll('li.item a[href]');
+        var elements = __utils__.findAll('li.item a.product-image[href]');
 		var aArr = [];
 		[].forEach.call(elements,function(el){
 			var _href = el.getAttribute('href');
