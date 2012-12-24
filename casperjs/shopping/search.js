@@ -7,7 +7,7 @@ var casper = require("casper").create({
 
 casper.start("http://www.neimanmarcus.com.cn/", function() {
     // search for 'casperjs' from google form
-    this.fill('form[action="/search"]', { q: "casperjs" }, true);
+    //this.fill('form[action="/search"]', { q: "casperjs" }, true);
 });
 
 casper.then(function() {
