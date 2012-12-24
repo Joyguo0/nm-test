@@ -19,7 +19,7 @@ casper.then(function() {
 
 casper.then(function() {
     links = this.evaluate(function() {
-        var elements = __utils__.findAll('a[href]');
+        var elements = __utils__.findAll('li.item a[href]');
 		var aArr = [];
 		[].forEach.call(elements,function(el){
 			var _href = el.getAttribute('href');
