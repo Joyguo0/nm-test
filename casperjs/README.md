@@ -8,7 +8,7 @@ high-level functions, methods & syntaxic sugar for doing common
 
 
 
-##Script for key function
+##Key function
 
 ####1. Spide all link
 - Spide link in one page.
@@ -89,6 +89,12 @@ fs.write(myfile, mydata);
 
 ##Web Crawler Report
 
+- run Crawler
+
+```javascript
+$casper test crawler
+```
+
 - report template
 
 ```javascript
@@ -156,12 +162,19 @@ fs.write(myfile, mydata);
 
 ##Future: Auto Test Case
 
-### 1. Login
-### 2. Register
-### 3. Filter Product
-### 4. Search product
-### 5. Add to cart
-### 6. Check out
+### 1. Member
+- /member/login.js
+- /member/register.js
+- /member/forgotpwd.js
+- /member/logout.js
+
+### 2. Shopping
+- /shopping/filterproduct.js
+- /shopping/viewproduct.js
+- /shopping/addtocart.js
+- /shopping/checkout.js
+- /shopping/gwp.js
+- /shopping/coupon.js
 
 
 ##About Neiman Marcus [![Neiman Marcus](http://upload.wikimedia.org/wikipedia/en/thumb/8/84/Neiman_Marcus_logo.svg/200px-Neiman_Marcus_logo.svg.png)](http://www.neimanmarcus.com/)
