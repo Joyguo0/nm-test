@@ -23,6 +23,7 @@ div {width: auto; height: 60px; }
   function confirmExit()
   {
     if ( saveleave == 0) {
+      saveleave = saveleave + 1;
       alert( "You need to complete the survey");
       return false;
     }else{
