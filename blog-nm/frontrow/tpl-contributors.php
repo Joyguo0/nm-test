@@ -32,7 +32,7 @@ get_header(); ?>
                         <?php
                         echo wpautop(get_the_author_meta('description', $authid->ID));
 						// echo '<p><a href="http://e.weibo.com/'. get_the_author_meta( 'weibo', $authid->ID ) .'" target="_blank">@'.get_the_author_meta( 'weibo', $authid->ID ).'</a><br />';
-                        echo '<p><a href="http://e.weibo.com/'. get_the_author_meta( 'weibo', $authid->ID ) .'" target="_blank">@NeimanMarcus尼曼</a><br />';
+                        echo '<p><a href="'. get_the_author_meta( 'weibo_link', $authid->ID ) .'" target="_blank">@'.get_the_author_meta( 'weibo' ,$authid->ID ).'</a><br />';
                         
 						echo '<a href="'.get_the_author_meta('user_url', $authid->ID).'" target="_blank">'.get_the_author_meta('user_url', $authid->ID).'</a></p>';
                         ?>

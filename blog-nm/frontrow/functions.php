@@ -1,5 +1,9 @@
 <?php 
-
+add_filter('user_contactmethods','my_user_contactmethods');
+function my_user_contactmethods($user_contactmethods ){
+	$user_contactmethods ['weibo_link'] = '微博链接';
+	return $user_contactmethods ;
+}
 function dbd_setup() {
 	include('cpt-include.php');
 	add_theme_support( 'post-thumbnails' );
@@ -337,8 +341,8 @@ function nm_authorinfo() {
 	echo '<h4>'.sprintf( esc_attr__('%s'), get_the_author() ).'</h4>';
     echo '<p>'.mb_substr(get_the_author_meta( 'description' ),0,80).'&hellip;</p>';
 	echo '<div class="author-info-biolink"><a href="'. get_permalink(74).'#c'.get_the_author_meta( 'ID' ).'">'. sprintf( __('阅读资料Read Contributor\'s Full Bio »'), get_the_author() ).'</a></div>';
-	//echo '<div class="author-info-weibo">微博: <a href="http://e.weibo.com/'. get_the_author_meta( 'weibo' ) .'">@'.get_the_author_meta( 'weibo' ).'</a></div>';
-	echo '<div class="author-info-weibo">微博: <a href="http://e.weibo.com/'. get_the_author_meta( 'weibo' ) .'">@NeimanMarcus尼曼</a></div>';
+	echo '<div class="author-info-weibo">微博: <a href="'. get_the_author_meta( 'weibo_link' ) .'">@'.get_the_author_meta( 'weibo' ).'</a></div>';
+	//echo '<div class="author-info-weibo">微博: <a href="http://e.weibo.com/'. get_the_author_meta( 'weibo' ) .'">@NeimanMarcus尼曼</a></div>';
 	echo '</div>';	
 }
 
